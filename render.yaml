@@ -10,10 +10,10 @@ services:
     envVars:
       # Node Version
       - key: NODE_VERSION
-        value: 18.17.0
+        value: 22.14.0
 
       - key: PORT
-        value: 10000
+        value: 3000
 
       # Auth
       - key: NEXTAUTH_URL
@@ -42,7 +42,7 @@ services:
           type: web
           envVarKey: RENDER_EXTERNAL_URL
       - key: NEXT_PRIVATE_INTERNAL_WEBAPP_URL
-        value: 'http://localhost:10000'
+        value: 'http://localhost:3000'
 
       # SMTP
       - key: NEXT_PRIVATE_SMTP_TRANSPORT
