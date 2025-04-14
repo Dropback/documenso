@@ -30,6 +30,4 @@ server.use(
 
 const handler = handle(build, server);
 
-// Use PORT environment variable if available, fallback to 3000
-const port = process.env.PORT ? parseInt(process.env.PORT, 10) : 3000;
-serve({ fetch: handler.fetch, port });
+serve({ fetch: handler.fetch, port: 3000 });

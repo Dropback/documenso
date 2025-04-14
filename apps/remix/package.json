@@ -39,6 +39,8 @@
     "@simplewebauthn/server": "^9.0.3",
     "autoprefixer": "^10.4.13",
     "colord": "^2.9.3",
+    "cross-env": "^7.0.3",
+    "dotenv-cli": "^7.3.0",
     "framer-motion": "^10.12.8",
     "hono": "4.7.0",
     "hono-react-router-adapter": "^0.6.2",
@@ -67,6 +69,7 @@
     "sharp": "0.32.6",
     "tailwindcss": "^3.4.15",
     "ts-pattern": "^5.0.5",
+    "tw-to-css": "^0.0.11",
     "ua-parser-js": "^1.0.37",
     "uqr": "^0.1.2"
   },
