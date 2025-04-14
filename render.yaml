@@ -3,8 +3,8 @@ services:
     runtime: node
     name: documenso-app
     plan: free
-    buildCommand: npm i && npm run build:web
-    startCommand: npx prisma migrate deploy --schema packages/prisma/schema.prisma && npx turbo run start --filter=@documenso/remix
+    buildCommand: npm i && npm run build:web && npm run prisma:migrate-deploy
+    startCommand: npm run start
     healthCheckPath: /api/health
 
     envVars:
