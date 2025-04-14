@@ -5,6 +5,10 @@
       "dependsOn": ["prebuild", "^build"],
       "outputs": [".next/**", "!.next/cache/**"]
     },
+    "build:web": {
+      "dependsOn": ["prebuild", "^build"],
+      "outputs": [".next/**", "!.next/cache/**"]
+    },
     "prebuild": {
       "cache": false,
       "dependsOn": ["^prebuild"]
