@@ -3,6 +3,7 @@
   "version": "1.10.0-rc.4",
   "scripts": {
     "build": "turbo run build",
+    "build:web": "turbo run build --filter=@documenso/remix",
     "dev": "turbo run dev --filter=@documenso/remix",
     "dev:remix": "turbo run dev --filter=@documenso/remix",
     "dev:docs": "turbo run dev --filter=@documenso/documentation",

@@ -74,7 +74,7 @@ services:
       - POSTGRES_PASSWORD=password
       - POSTGRES_DB=trigger
     ports:
-      - 54321:5432
+      - 9876:9876
 
 volumes:
   minio:
