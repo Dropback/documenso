@@ -32,9 +32,9 @@ jobs:
           docker build \
             -f ./docker/Dockerfile \
             --progress=plain \
-            -t "documenso/documenso-$BUILD_PLATFORM:latest" \
-            -t "documenso/documenso-$BUILD_PLATFORM:$GIT_SHA" \
-            -t "documenso/documenso-$BUILD_PLATFORM:$APP_VERSION" \
+            -t "dropbackhq/documenso-dropback-$BUILD_PLATFORM:latest" \
+            -t "dropbackhq/documenso-dropback-$BUILD_PLATFORM:$GIT_SHA" \
+            -t "dropbackhq/documenso-dropback-$BUILD_PLATFORM:$APP_VERSION" \
             .
 
       - name: Push the docker image to DockerHub
