@@ -38,6 +38,6 @@ jobs:
             .
 
       - name: Push the docker image to DockerHub
-        run: docker push --all-tags "dropbackhq/documenso-dropback-$BUILD_PLATFORM:latest"
+        run: docker push "dropbackhq/documenso-dropback-$BUILD_PLATFORM:latest"
         env:
           BUILD_PLATFORM: amd64
