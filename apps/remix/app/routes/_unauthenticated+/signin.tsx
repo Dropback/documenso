@@ -48,7 +48,7 @@ export default function SignIn({ loaderData }: Route.ComponentProps) {
         </h1>
 
         <p className="text-muted-foreground mt-2 text-sm">
-          <Trans>Welcome back, we are lucky to have you.</Trans>
+          <Trans>Welcome back to Dropback Sign!</Trans>
         </p>
         <hr className="-mx-6 my-4" />
 
