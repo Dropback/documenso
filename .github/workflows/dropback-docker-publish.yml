@@ -7,12 +7,9 @@ on:
 jobs:
   build_and_publish_platform_containers:
     name: Build and publish platform containers
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-latest
     strategy:
       fail-fast: false
-      matrix:
-        os:
-          - warp-ubuntu-latest-x64-4x
 
     steps:
       - uses: actions/checkout@v4
@@ -27,7 +24,7 @@ jobs:
 
       - name: Build the docker image
         env:
-          BUILD_PLATFORM: ${{ matrix.os == 'warp-ubuntu-latest-arm64-4x' && 'arm64' || 'amd64' }}
+          BUILD_PLATFORM: amd64
         run: |
           APP_VERSION="$(git name-rev --tags --name-only $(git rev-parse HEAD) | head -n 1 | sed 's/\^0//')"
           GIT_SHA="$(git rev-parse HEAD)"
@@ -43,4 +40,4 @@ jobs:
       - name: Push the docker image to DockerHub
         run: docker push --all-tags "dropbackhq/documenso-dropback-$BUILD_PLATFORM:latest"
         env:
-          BUILD_PLATFORM: ${{ matrix.os == 'warp-ubuntu-latest-arm64-4x' && 'arm64' || 'amd64' }}
+          BUILD_PLATFORM: amd64
