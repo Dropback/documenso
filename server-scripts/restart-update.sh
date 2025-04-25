@@ -1,12 +1,11 @@
+#!/bin/bash
 if [ "$PWD" != "$HOME/documenso" ]; then
   cd "$HOME/documenso"
 fi
 
-#!/bin/bash
-
 # Configuration
-IMAGE_NAME=" dropbackhq/documenso-dropback"
-IMAGE_TAG="amd64:latest"
+IMAGE_NAME="dropbackhq/documenso-dropback-amd64"
+IMAGE_TAG="latest"
 
 # Function to get image SHA
 get_image_sha() {
