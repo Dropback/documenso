@@ -21,8 +21,7 @@ const defaultBrandingContextValue: BrandingContextValue = {
 const dropbackBrandingContextValue: BrandingContextValue = {
   brandingEnabled: true,
   brandingUrl: 'https://www.dropback.com/',
-  brandingLogo:
-    'https://cdn.prod.website-files.com/6765ae74882175bf8d1ad94b/676600778b9fa0efd05df716_dropback-long-black-p-2000.png',
+  brandingLogo: '', // When this property is empty, the logo at static/logo.png gets used (which has been changed to a dropback logo).
   brandingCompanyDetails: 'Dropback, Inc.',
   brandingHidePoweredBy: true,
 };
