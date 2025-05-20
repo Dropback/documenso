@@ -18,12 +18,21 @@ const defaultBrandingContextValue: BrandingContextValue = {
   brandingHidePoweredBy: false,
 };
 
+const dropbackBrandingContextValue: BrandingContextValue = {
+  brandingEnabled: true,
+  brandingUrl: 'https://www.dropback.com/',
+  brandingLogo:
+    'https://cdn.prod.website-files.com/6765ae74882175bf8d1ad94b/676600778b9fa0efd05df716_dropback-long-black-p-2000.png',
+  brandingCompanyDetails: 'Dropback, Inc.',
+  brandingHidePoweredBy: true,
+};
+
 export const BrandingProvider = (props: {
   branding?: BrandingContextValue;
   children: React.ReactNode;
 }) => {
   return (
-    <BrandingContext.Provider value={props.branding ?? defaultBrandingContextValue}>
+    <BrandingContext.Provider value={dropbackBrandingContextValue}>
       {props.children}
     </BrandingContext.Provider>
   );
