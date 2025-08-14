@@ -33,7 +33,7 @@ done
 
 # Your existing backup command
 BACKUP_FILE="$BACKUP_DIR/backup_$(date +%Y%m%d_%H%M%S).sql"
-docker exec -t documenso-production_database_1 pg_dumpall -c -U your-db-user | gzip > $BACKUP_FILE
+docker exec -t documenso-production-database-1 pg_dumpall -c -U documenso | gzip > $BACKUP_FILE
 
 # Check size after backup
 while [ $(get_dir_size) -gt $MAX_SIZE_BYTES ]; do
