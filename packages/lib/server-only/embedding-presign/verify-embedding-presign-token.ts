@@ -16,6 +16,7 @@ export const verifyEmbeddingPresignToken = async ({
   let decodedToken: JWTPayload;
 
   try {
+    console.log('[verifyEmbeddingPresignToken] Attempting to decode JWT token:', token);
     decodedToken = decodeJwt<JWTPayload>(token);
   } catch (error) {
     console.error('Error decoding JWT token:', error);
